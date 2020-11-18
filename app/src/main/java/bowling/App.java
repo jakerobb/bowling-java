@@ -5,8 +5,33 @@ package bowling;
 
 public class App {
     public static void main(String[] args) {
+        // simple game
         Game game = new Game();
-        game.roll(0);
-        System.out.println(game.score());
+        game.roll(2);
+        game.roll(3);
+
+        game.roll(4);
+        game.roll(5);
+
+        System.out.println(game.score()); // 14
+
+        // spare bonus
+        game = new Game();
+        game.roll(8);
+        game.roll(2);
+
+        game.roll(5);
+        game.roll(1);
+
+        System.out.println(game.score()); // 21
+
+        // strike bonus
+        game = new Game();
+        game.roll(10);
+
+        game.roll(5);
+        game.roll(1);
+
+        System.out.println(game.score()); // 22
     }
 }
