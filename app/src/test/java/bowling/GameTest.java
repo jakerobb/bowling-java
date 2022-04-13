@@ -8,6 +8,8 @@ public class GameTest {
         Game classUnderTest = new Game();
         classUnderTest.roll(0);
         classUnderTest.roll(0);
+
+        classUnderTest.roll(0);
         classUnderTest.roll(0);
 
         assertEquals(0, classUnderTest.score());
